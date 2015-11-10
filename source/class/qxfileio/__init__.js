@@ -1,6 +1,5 @@
 /** <h3> qxfileio API Documentation </h3>
  *
- * Replace this text with an appropriate overview and introduction to your 
- * application.
+ * Provides class to read and write files on the client file system.
  *
  */

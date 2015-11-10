@@ -3,17 +3,17 @@
   {
     "name" : "qxFileIO",
 
-    "summary" : "Custom Application",
-    "description" : "This is a skeleton for a custom application with qooxdoo.",
+    "summary" : "Utilitary class to read and write file client side",
+    "description" : "This application contains classes that allow reading and writing files to user file system using the W3C File API.",
     
     "homepage" : "http://some.homepage.url/",
 
-    "license" : "SomeLicense",
+    "license" : "CeCILL",
     "authors" : 
     [
       {
-        "name" : "First Author (uid)",
-        "email" : "first.author@some.domain"
+        "name" : "Sylvain Gaillard (sgaillard)",
+        "email" : "sylvain.gaillard@angers.inra.fr"
       }
     ],
 
