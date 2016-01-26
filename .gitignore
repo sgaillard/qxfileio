@@ -1,3 +1,4 @@
 source/script/*
 build/*
 api/*
+.*.swp
