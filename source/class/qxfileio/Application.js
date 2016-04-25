@@ -9,7 +9,7 @@
 ************************************************************************ */
 
 /**
- * Demo application class of package "qxFileIO"
+ * Demo application class of package "qxfileio"
  *
  * @asset(qxfileio/*)
  */

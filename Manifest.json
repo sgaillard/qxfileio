@@ -1,7 +1,7 @@
 {
   "info" : 
   {
-    "name" : "qxFileIO",
+    "name" : "qxfileio",
 
     "summary" : "Utilitary class to read and write file client side",
     "description" : "This application contains classes that allow reading and writing files to user file system using the W3C File API.",
