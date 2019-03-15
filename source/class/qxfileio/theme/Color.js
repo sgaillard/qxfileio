@@ -1,16 +1,16 @@
 /* ************************************************************************
 
-   Copyright:
+   Copyright: 2019 INRA
 
-   License:
+   License: CeCILL
 
-   Authors:
+   Authors: Sylvain Gaillard (sgaillard) sylvain.gaillard@inra.fr
 
 ************************************************************************ */
 
 qx.Theme.define("qxfileio.theme.Color",
 {
-  extend : qx.theme.modern.Color,
+  extend : qx.theme.indigo.Color,
 
   colors :
   {

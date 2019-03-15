@@ -1,16 +1,16 @@
 /* ************************************************************************
 
-   Copyright:
+   Copyright: 2019 INRA
 
-   License:
+   License: CeCILL
 
-   Authors:
+   Authors: Sylvain Gaillard (sgaillard) sylvain.gaillard@inra.fr
 
 ************************************************************************ */
 
 qx.Theme.define("qxfileio.theme.Font",
 {
-  extend : qx.theme.modern.Font,
+  extend : qx.theme.indigo.Font,
 
   fonts :
   {

@@ -1,0 +1,25 @@
+{
+  "targets": [
+    {
+      "type": "source",
+      "outputPath": "compiled/source",
+      "bundle": {
+        "include": "qx.*"
+      }
+    },
+    {
+      "type": "build",
+      "outputPath": "compiled/build"
+    }
+  ],
+  "defaultTarget": "source",
+  "locales": ["en"],
+
+  "applications": [
+    {
+      "class": "qxfileio.demo.Application",
+      "theme": "qxfileio.theme.Theme",
+      "name": "qxfileio"
+    }
+  ]
+}

@@ -1,23 +1,19 @@
 /* ************************************************************************
 
-   Copyright: Institut de Recherche en Horticulture et Semences
+   Copyright: 2019 INRA
 
    License: CeCILL
 
-   Authors: Sylvain Gaillard
+   Authors: Sylvain Gaillard (sgaillard) sylvain.gaillard@inra.fr
 
 ************************************************************************ */
 
 /**
- * Demo application class of package "qxfileio"
- *
- * @asset(qxfileio/*)
+ * This is the main application class of "qxfileio"
  */
-qx.Class.define("qxfileio.Application",
+qx.Class.define("qxfileio.demo.Application",
 {
   extend : qx.application.Standalone,
-
-
 
   /*
   *****************************************************************************
@@ -28,7 +24,7 @@ qx.Class.define("qxfileio.Application",
   members :
   {
     /**
-     * This method contains the initial application code and gets called 
+     * This method contains the initial application code and gets called
      * during startup of the application
      */
     main : function()
@@ -46,20 +42,20 @@ qx.Class.define("qxfileio.Application",
       }
 
       /*
-         -------------------------------------------------------------------------
-         Below is your actual application code...
-         -------------------------------------------------------------------------
-       */
+      -------------------------------------------------------------------------
+        Below is your actual application code...
+      -------------------------------------------------------------------------
+      */
 
       // Document is the application root
       var doc = this.getRoot();
 
-      // Create a field to put sequence data
-      var sequenceField = new qx.ui.form.TextArea();
-      sequenceField.setWidth(400);
-      sequenceField.setHeight(300);
-      sequenceField.setNativeContextMenu(true);
-      doc.add(sequenceField, {left: 10, top: 10});
+      // Create a field to put data
+      var textField = new qx.ui.form.TextArea();
+      textField.setWidth(400);
+      textField.setHeight(300);
+      textField.setNativeContextMenu(true);
+      doc.add(textField, {left: 10, top: 10});
 
       // Create a file chooser object
       var fileChooser = new qxfileio.FileChooser();
@@ -94,7 +90,7 @@ qx.Class.define("qxfileio.Application",
 
       fr.addListener("load", function(e) {
         this.debug('file load successfully');
-        sequenceField.setValue(e.getData());
+        textField.setValue(e.getData());
       }, this);
 
       fr.addListener("loadend", function(e) {
@@ -103,7 +99,7 @@ qx.Class.define("qxfileio.Application",
       }, this);
 
       fr.addListener("loadprogress", function(e) {
-        this.debug('progress: ' + Math.round(e.getLoaded() / e.getTotal() * 100) + '%'); 
+        this.debug('progress: ' + Math.round(e.getLoaded() / e.getTotal() * 100) + '%');
       }, this);
 
       fr.addListener("loaderror", function(e) {
@@ -131,12 +127,12 @@ qx.Class.define("qxfileio.Application",
       }, this);
 
       // Create a button to save text field content to a file
-      var saveButton = new qx.ui.form.Button(this.tr("Save to..."));
+      var saveButton = new qx.ui.form.Button(this.tr("Save"));
       var fw = new qxfileio.FileWriter();
       //fw.setType("application/octet-stream");
       saveButton.addListener("execute", function() {
         this.debug("Click save! " + fw.getType());
-        fw.saveTextAsFile(sequenceField.getValue(), "sequences.fa");
+        fw.saveTextAsFile(textField.getValue(), "data.txt");
       }, this);
       doc.add(saveButton, {left : 20, top : 360});
     }

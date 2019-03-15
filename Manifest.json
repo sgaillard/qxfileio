@@ -1,27 +1,32 @@
 {
-  "info" : 
+  "info" :
   {
     "name" : "qxfileio",
 
     "summary" : "Utilitary class to read and write file client side",
     "description" : "This application contains classes that allow reading and writing files to user file system using the W3C File API.",
-    
-    "homepage" : "http://some.homepage.url/",
+
+    "homepage" : "https://github.com/sgaillard/qxfileio",
 
     "license" : "CeCILL",
-    "authors" : 
+    "authors" :
     [
       {
         "name" : "Sylvain Gaillard (sgaillard)",
-        "email" : "sylvain.gaillard@angers.inra.fr"
+        "email" : "sylvain.gaillard@inra.fr"
       }
     ],
 
-    "version" : "master",
-    "qooxdoo-versions": ["5.0"]
+    "version" : "0.1.0",
+    "qooxdoo-versions": ["5.0.2", "6.0.0-alpha"]
   },
   
-  "provides" : 
+  "requires" : {
+    "qooxdoo-sdk": "^6.0.0-alpha",
+    "qooxdoo-compiler": "^0.3.0-alpha"
+  },
+
+  "provides" :
   {
     "namespace"   : "qxfileio",
     "encoding"    : "utf-8",
@@ -31,4 +36,3 @@
     "type"        : "application"
   }
 }
-

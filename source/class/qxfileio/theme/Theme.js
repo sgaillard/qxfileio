@@ -1,10 +1,10 @@
 /* ************************************************************************
 
-   Copyright:
+   Copyright: 2019 INRA
 
-   License:
+   License: CeCILL
 
-   Authors:
+   Authors: Sylvain Gaillard (sgaillard) sylvain.gaillard@inra.fr
 
 ************************************************************************ */
 

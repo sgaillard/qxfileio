@@ -1,4 +1,3 @@
-source/script/*
-build/*
-api/*
-.*.swp
+# .gitignore template for skeleton-based apps
+/compiled
+/contrib
