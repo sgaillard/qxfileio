@@ -36,6 +36,7 @@ qx.Class.define("qxfileio.StringTokenizer", {
     this.__lastPos = 0;
     this.__length = str.length;
     this.__split = split;
+    this.__tokenIndex = 0;
   },
 
   members : {
@@ -43,6 +44,7 @@ qx.Class.define("qxfileio.StringTokenizer", {
     __lastPos : 0,
     __length : 0,
     __split : "\n",
+    __tokenIndex : 0,
 
     /**
      * Test used to know if there is some remainig token (i.e. if the string
@@ -71,6 +73,7 @@ qx.Class.define("qxfileio.StringTokenizer", {
       } else {
         this.__lastPos = nextPos + this.__split.length;
       }
+      this.__tokenIndex++;
       return token;
     },
 
@@ -81,7 +84,7 @@ qx.Class.define("qxfileio.StringTokenizer", {
      * tokens in the string, empty string tokens will be returned. The returned
      * Array will always have the requested size.
      *
-     * @param n {integer} The number of tokens to get.
+     * @param n {Integer} The number of tokens to get.
      *
      * @return {Array} A Array of tokens
      */
@@ -94,10 +97,19 @@ qx.Class.define("qxfileio.StringTokenizer", {
     },
 
     /**
+     * Get the number of already extracted tokens from the string
+     *
+     * @return {Integer} The number of already extracted tokens.
+    getTokenCounter : function() {
+      return this.__tokenIndex;
+    },
+
+    /**
      * Get back to the beginning of the string.
      */
     rewind : function() {
       this.__lastPos = 0;
+      this.__tokenIndex = 0;
     }
   }
 });
