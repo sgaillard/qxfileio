@@ -100,6 +100,7 @@ qx.Class.define("qxfileio.StringTokenizer", {
      * Get the number of already extracted tokens from the string
      *
      * @return {Integer} The number of already extracted tokens.
+     */
     getTokenCounter : function() {
       return this.__tokenIndex;
     },
