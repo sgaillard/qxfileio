@@ -17,10 +17,10 @@
       }
     ],
 
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "qooxdoo-versions": ["5.0.2", "6.0.0-alpha"]
   },
-  
+
   "requires" : {
     "qooxdoo-sdk": "^6.0.0-alpha",
     "qooxdoo-compiler": "^0.3.0-alpha"
