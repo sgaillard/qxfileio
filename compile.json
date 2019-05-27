@@ -19,7 +19,8 @@
     {
       "class": "qxfileio.demo.Application",
       "theme": "qxfileio.theme.Theme",
-      "name": "qxfileio"
+      "name": "qxfileio",
+      "bootPath": "source/boot"
     }
   ]
 }
